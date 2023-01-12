@@ -12,8 +12,8 @@ const PORT = process.env.PORT;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use('/api', urlsRouter);
 app.use('/', redirectRouter);
+app.use('/api', urlsRouter);
 
 app.listen(PORT, () => {
     console.log("App is up")
