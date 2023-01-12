@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+</head>
+<body>
+    <h1>URL Shrinker</h1>
+    <form action = "/shortUrls" method = "POST">
+        <label for="fullUrl">Url</label>
+        <input type="url" name="fullUrl" id="fullUrl">
+        <button type="submit">Shrink</button>
+    </form>
+
+    <table>
+        <tr>
+            <th>Full URL</th>
+            <th>Short URL</th>
+            <th>Clicks</th>
+        </tr>
+        <tbody>
+            <tr>
+                <td><a href="https://www.google.com/search?q=rickroll&oq=rickroll+&aqs=chrome..69i57.5789j0j1&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:57c1060c,vid:oHg5SJYRHA0">Rickrolled</a></td>
+                <td><a href="/123456">123456</a></td>
+                <td>10</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
