@@ -2,13 +2,11 @@ import express from 'express';
 import { nanoid } from 'nanoid';
 import Url from '../models/Url.js';
 import validUrl from 'valid-url'
-import dotenv from 'dotenv';
-dotenv.config({ path: '../.env' });
 const router = express.Router();
 
-router.post('/short', async(req, res) => {
-    console.log("POST");
-    console.log(req.body);
+router.post('/', async(req, res) => {
+    console.log(req.method);
+    console.log(req.body.origUrl);
 
     const {origUrl} = req.body;
     const base = process.env.BASE;
@@ -32,11 +30,10 @@ router.post('/short', async(req, res) => {
                   });
 
                   await url.save();
+                  console.log(url);
                   console.log("Saved");
                   res.json(url);
             }
-            console.log("here")
-            console.log(url);
 
         } catch(err){
             console.log(err);
