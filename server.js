@@ -22,5 +22,6 @@ app.use('/', redirectRouter); //Redirecting to short links
 
 app.listen(PORT, () => {
     console.log("App is up")
-    console.log(`${PORT} and ${process.env.DB_URI}`)
+    console.log(`PORT NO ${PORT}`);
+    console.log(`DB_URI ${process.env.DB_URI}`);
 })
