@@ -16,10 +16,7 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs');
 
 
-app.get('/', (req, res) => {
-    console.log("Loading view");
-    res.render('./index')
-})
+
 app.use('/api', urlsRouter);  //For making short links
 app.use('/', redirectRouter); //Redirecting to short links
 
