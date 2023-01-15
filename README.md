@@ -1,2 +1,2 @@
 # UrlShortener
-A Url Shortener
+A Url Shortener API
