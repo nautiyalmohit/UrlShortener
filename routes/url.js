@@ -6,9 +6,10 @@ const router = express.Router();
 
 router.post('/', async(req, res) => {
     console.log(req.method);
-    console.log(req.body.origUrl);
-
     const {origUrl} = req.body;
+    console.log("Body\n", req.body);
+    console.log("origUrl: ", origUrl);
+
     const base = process.env.BASE;
 
     const urlId = nanoid();
@@ -41,7 +42,10 @@ router.post('/', async(req, res) => {
         }
 
     } else {
-        res.status(400).json('Invalid Original Url');
+        if (origUrl)
+            res.status(400).json('Invalid Url');
+        else
+            res.status(400).json('Undefine Url');
     }
 
 })
