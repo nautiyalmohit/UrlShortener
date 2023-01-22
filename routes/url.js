@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.post('/', async(req, res) => {
     console.log(req.method);
+    console.log(req.get('Content-Type'));
     const {origUrl} = req.body;
     console.log("Body\n", req.body);
     console.log("origUrl: ", origUrl);
